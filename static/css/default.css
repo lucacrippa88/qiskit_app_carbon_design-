@@ -26,7 +26,7 @@ body {
 .result {
   position: fixed;
   top: 0px;
-  left: 55%;
+  /* left: 55%; */
   font-size: 400px;
 }
 
