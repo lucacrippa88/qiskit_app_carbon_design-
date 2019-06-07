@@ -119,7 +119,31 @@
       <!-- Right column: outputs -->
       <div class="col l7 s12">
 
-        <div id="quantized" style="display:none"></div>
+        <div id="quantized" style="display:none">
+        </div>
+
+        <div id="slider" style="display:none">
+          <center>
+              <div class="bx--form-item">
+                <label class="bx--label ">
+                  Amplify dominant results
+                </label>
+                <div class="bx--slider-container">
+                  <label id="slider-input-box_bottom-range-label" class="bx--slider__range-label">0</label>
+                  <div class="bx--slider " data-slider data-slider-input-box="#slider-input-box">
+                    <div class="bx--slider__thumb" tabindex="0"></div>
+                    <div class="bx--slider__track"></div>
+                    <div class="bx--slider__filled-track"></div>
+                    <input aria-label="slider" id="slider" class="bx--slider__input" type="range" step="1" min="0" max="10" value="5">
+                  </div>
+                  <label id="slider-input-box_top-range-label" class="bx--slider__range-label">10</label>
+                  <input id="slider-input-box" aria-labelledby="slider-input-box_bottom-range-label slider-input-box_top-range-label" type="number" class="bx--text-input bx--slider-text-input hide" placeholder="0" value="25">
+                </div>
+              </div>
+          </center>
+        </div>
+
+
 
       </div>
 
