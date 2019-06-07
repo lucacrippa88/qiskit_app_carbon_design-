@@ -1,0 +1,77 @@
+{
+  "_from": "@carbon/icons",
+  "_id": "@carbon/icons@10.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-/BRknSqSwUm7I29MWTptV8Y26NGI1wckG21DDtmYF2za/+B3OZuNKM9CaqP85rfZE159wRo+LHygkl3llgCF+w==",
+  "_location": "/@carbon/icons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@carbon/icons",
+    "name": "@carbon/icons",
+    "escapedName": "@carbon%2ficons",
+    "scope": "@carbon",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@carbon/icons/-/icons-10.2.0.tgz",
+  "_shasum": "e4da78ad8f13622570c857060ed09865ab9df981",
+  "_spec": "@carbon/icons",
+  "_where": "/Users/lucacrippa/Box Sync/Lavoro/CODING/CARBON",
+  "bugs": {
+    "url": "https://github.com/IBM/carbon-elements/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Icons for digital and software products using the Carbon Design System",
+  "devDependencies": {
+    "@carbon/cli-reporter": "10.2.0",
+    "change-case": "^3.0.2",
+    "del": "^3.0.0",
+    "js-yaml": "^3.12.1",
+    "klaw-sync": "^6.0.0",
+    "memfs": "^2.14.0",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.66.6",
+    "svgo": "^1.1.1"
+  },
+  "files": [
+    "es",
+    "lib",
+    "scss",
+    "svg",
+    "umd"
+  ],
+  "gitHead": "e71825a0cf44f6f41fee7d2b0dd9c57d7bda126a",
+  "keywords": [
+    "ibm",
+    "elements",
+    "carbon",
+    "carbon-elements",
+    "carbon-design-system"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "name": "@carbon/icons",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM/carbon-elements/tree/master/packages/icons"
+  },
+  "scripts": {
+    "build": "yarn clean && node tasks/build.js && bundler sassdoc 'scss/*.scss'",
+    "clean": "rimraf es lib svg umd meta.json",
+    "prepublishOnly": "yarn build"
+  },
+  "version": "10.2.0"
+}

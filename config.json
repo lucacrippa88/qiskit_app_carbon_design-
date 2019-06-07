@@ -1,0 +1,8 @@
+{
+    "user":{
+        "mail":"adminQ@ibm.com",
+        "password":"italyQ2018"
+    },
+    "IBMQ":{
+        "apikey":"c61ecf2cedbcb767bc8c22f8ed5309e065fe4f8b2fe494114219021f072bfd2701c7ba4e05b7ffb27851ca1b0ba57aa6bbe5832ebe09b18c36f450639ab63789"    }
+}

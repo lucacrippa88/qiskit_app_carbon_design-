@@ -1,0 +1,82 @@
+.vl { display: none; }
+
+body {
+  /* background-color: #f2f4f8!important; */
+  background-color: #ffffff!important;
+}
+
+#quantized {
+  min-height: 400px!important;
+  text-align: center!important;
+  position: relative!important;
+  top: 50%!important;
+}
+
+.gate-btn {
+  width: 41px!important;
+  padding-right: 0px!important;
+}
+
+.sidenav-overlay { opacity:0.6!important }
+
+.material-icons {
+  color: #616161;
+}
+
+.result {
+  position: fixed;
+  top: 0px;
+  left: 55%;
+  font-size: 400px;
+}
+
+.show-desktop {
+  display: none;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.right-tile-img {
+  position: absolute;
+  right: 5%;
+  top: 8%;
+}
+
+.right-link {
+  position: relative;
+  right: -93%;
+}
+
+.flat-link {
+  text-decoration: none!important;
+  color: inherit!important;
+}
+
+/* Overwrite Carbon Design */
+a.bx--tabs__nav-link {
+  width: 12rem!important;
+}
+
+@media all and (min-width: 1200px) {
+
+  .show-desktop {
+    display: flex;
+  }
+
+  .vl {
+      border-left: 1px solid #bdbdbd;
+      height: 550px;
+      display: block;
+      left: 40px;
+      position: relative;
+  }
+
+}

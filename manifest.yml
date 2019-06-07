@@ -1,0 +1,7 @@
+applications:
+- name: test-app-test-a
+  memory: 540M
+  instances: 1
+  disk_quota: 2024M
+  domain: mybluemix.net
+  services: []

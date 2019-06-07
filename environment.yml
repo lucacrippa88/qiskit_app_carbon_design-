@@ -1,0 +1,20 @@
+name: app_carbon 
+channels:
+  - menpo
+  - defaults
+dependencies:
+  - python=3.6.4
+  - flask=1.0.2 
+  - flask=1.0.2
+  - python=3.6.4
+  - numpy
+  - scipy
+  - cython
+  - IPython
+  - pip:
+    - matplotlib
+    - flask_login
+    - qutip
+    - ibmquantumexperience==2.0.4
+    - qiskit==0.7.0
+
