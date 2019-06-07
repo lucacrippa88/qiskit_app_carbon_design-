@@ -4,14 +4,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/static/js/functions.js"></script>
-  <script src="js/genericFunctions.js"></script>
+  <!-- <script src="js/genericFunctions.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Carbon Design -->
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="static/css/index.css">
   <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
   <!-- Custom Design -->
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="static/css/default.css">
+  <link rel="stylesheet" href="static/css/grid.css">
 </head>
 
 <body>
@@ -470,7 +470,71 @@
 </body>
 
 <script>
-includeHTML();
+// includeHTML();
+refreshPage(); // Refresh page
+
+       var sel_base;
+
+       // click to activate the action linked to the select dropdown (basis)
+       $("#dropdown2").change(function() {
+
+           resizeSvg();
+
+           sel_base = $('#dropdown2').val();
+
+           if (sel_base == "x") {
+               $("#bpz").addClass("hide");
+               $("#baz").addClass("hide");
+               $("#bpy").addClass("hide");
+               $("#bay").addClass("hide");
+               $("#bpx").removeClass("hide");
+               $("#bax").removeClass("hide");
+           }
+           if (sel_base == "y") {
+               $("#bpz").addClass("hide");
+               $("#baz").addClass("hide");
+               $("#bpx").addClass("hide");
+               $("#bax").addClass("hide");
+               $("#bpy").removeClass("hide");
+               $("#bay").removeClass("hide");
+           }
+           if (sel_base == "z") {
+               $("#bpx").addClass("hide");
+               $("#bax").addClass("hide");
+               $("#bpy").addClass("hide");
+               $("#bay").addClass("hide");
+               $("#bpz").removeClass("hide");
+               $("#baz").removeClass("hide");
+           }
+
+       });
+
+       // click to activate the action linked to the buttons (operators)
+       $("#x").click(function() {
+           goQuantumSpheres("x", $('#dropdown2').val())
+       });
+       $("#y").click(function() {
+           goQuantumSpheres("y", $('#dropdown2').val())
+       });
+       $("#z").click(function() {
+           goQuantumSpheres("z", $('#dropdown2').val())
+       });
+       $("#h").click(function() {
+           goQuantumSpheres("h", $('#dropdown2').val())
+       });
+       $("#s").click(function() {
+           goQuantumSpheres("s", $('#dropdown2').val())
+       });
+       $("#sdg").click(function() {
+           goQuantumSpheres("sdg", $('#dropdown2').val())
+       });
+       $("#t").click(function() {
+           goQuantumSpheres("t", $('#dropdown2').val())
+       });
+       $("#tdg").click(function() {
+           goQuantumSpheres("tdg", $('#dropdown2').val())
+       });
+
 </script>
 
 </html>
