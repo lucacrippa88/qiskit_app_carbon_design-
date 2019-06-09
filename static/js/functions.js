@@ -145,6 +145,9 @@ $("#go").click(function() {
                     var quantized = document.getElementById('quantized');
                     var span = document.createElement('span');
                     if (sim){ // with noise
+
+                      $("#slider").css("display", "block");
+
                       span.innerHTML = obj.value;
                       if(obj.shots < 20) {
                         var opacity = (obj.shots) / shots_total;
