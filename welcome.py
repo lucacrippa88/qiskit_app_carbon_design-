@@ -55,7 +55,7 @@ jsonify = flask.jsonify
 app.secret_key = 'italy ibm q application pythonQ'
 login_manager = flask_login.LoginManager()
 login_manager.init_app(app)
-# Mock database 
+# Mock database
 users = {credentials_file['user']['mail']: {'password': credentials_file['user']['password']}}
 class User(flask_login.UserMixin):
     pass
@@ -95,7 +95,7 @@ def login():
             user = User()
             user.id = email
             flask_login.login_user(user)
-            return app.send_static_file('menu.html') # Redirect to landing page
+            return app.send_static_file('dashboard.html') # Redirect to landing page
 
     return '''<p>Invalid login, try again</p>'''
 
@@ -110,15 +110,30 @@ def unauthorized_handler():
 def Welcome():
     return app.send_static_file('login.html')
 
-@app.route('/menu',methods=['GET', 'POST'])
+@app.route('/dashboard',methods=['GET', 'POST'])
 @flask_login.login_required
-def menu():
-    return app.send_static_file('menu.html')
+def Dashboard():
+    return app.send_static_file('dashboard.html')
 
 @app.route('/spheres', methods=['GET', 'POST'])
 @flask_login.login_required
 def Spheres():
     return app.send_static_file('spheres.html')
+
+@app.route('/docs', methods=['GET', 'POST'])
+@flask_login.login_required
+def Docs():
+    return app.send_static_file('docs.html')
+
+@app.route('/team', methods=['GET', 'POST'])
+@flask_login.login_required
+def Team():
+    return app.send_static_file('team.html')
+
+@app.route('/publications', methods=['GET', 'POST'])
+@flask_login.login_required
+def Publications():
+    return app.send_static_file('publications.html')
 
 @app.route('/emoticons', methods=['GET', 'POST'])
 @flask_login.login_required
@@ -141,7 +156,7 @@ def appOper():
 @app.route('/visualize3d', methods=['GET','POST'])
 def sphere():
     return app.send_static_file('visualize3d.html')
-    
+
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
     # app.debug = True

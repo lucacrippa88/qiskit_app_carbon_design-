@@ -146,31 +146,33 @@ $("#go").click(function() {
                     var span = document.createElement('span');
                     if (sim){ // with noise
 
-                      $("#slider").css("display", "block");
+                      // $("#slider").css("display", "block");
 
                       span.innerHTML = obj.value;
                       if(obj.shots < 20) {
                         var opacity = (obj.shots) / shots_total;
+                        // console.log("low  "+opacity);
                         span.classList.add("result");
                         span.setAttribute("id","result"+i);
                         quantized.appendChild(span);
                         $("#result"+i).css("opacity", opacity);
-                        console.log("-- WITH NOISE --");
-                        console.log("shot: "+obj.shots);
-                        console.log("smil: "+obj.value);
-                        console.log("opac: "+opacity);
-                        console.log("---");
+                        // console.log("-- WITH NOISE --");
+                        // console.log("shot: "+obj.shots);
+                        // console.log("smil: "+obj.value);
+                        // console.log("opac: "+opacity);
+                        // console.log("---");
                       } else {
                         var opacity = (obj.shots)*2 / shots_total;
+                        // console.log("high "+opacity);
                         span.classList.add("result");
                         span.setAttribute("id","result"+i);
                         quantized.appendChild(span);
                         $("#result"+i).css("opacity", opacity);
-                        console.log("-- WITH NOISE --");
-                        console.log("shot: "+obj.shots);
-                        console.log("smil: "+obj.value);
-                        console.log("opac: "+opacity);
-                        console.log("---");
+                        // console.log("-- WITH NOISE --");
+                        // console.log("shot: "+obj.shots);
+                        // console.log("smil: "+obj.value);
+                        // console.log("opac: "+opacity);
+                        // console.log("---");
                       }
                     } else { // no noise
                       span.innerHTML = binToAscii(obj.value);
@@ -179,11 +181,11 @@ $("#go").click(function() {
                       span.setAttribute("id","result"+i);
                       quantized.appendChild(span);
                       $("#result"+i).css("opacity", opacity);
-                      console.log("-- NO NOISE --");
-                      console.log("shot: "+obj.shots);
-                      console.log("smil: "+obj.value);
-                      console.log("opac: "+opacity);
-                      console.log("---");
+                      // console.log("-- NO NOISE --");
+                      // console.log("shot: "+obj.shots);
+                      // console.log("smil: "+obj.value);
+                      // console.log("opac: "+opacity);
+                      // console.log("---");
                     }
 
 

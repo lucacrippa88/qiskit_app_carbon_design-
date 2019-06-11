@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/static/js/functions.js"></script>
+  <script src="/static/js/genericFunctions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Carbon Design -->
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Custom Design -->
+  <link rel="stylesheet" href="static/css/default.css">
+  <link rel="stylesheet" href="static/css/grid.css">
+</head>
+
+<body>
+
+
+<div w3-include-html="/static/content.html"></div>
+
+
+
+<!-- Main container -->
+<div class="container" style="width:90%!important;">
+
+  <!-- Main row -->
+  <div class="row">
+
+      <!-- Left column: inputs -->
+      <div class="col l4 s12">
+
+          <div class="row">
+            <div class="col l12 s12">
+              <h1>
+                <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+                  <path data-v-883efc98="" d="m15.24796,17.25195l0,6.43199l-8.03998,0l0,-6.43199l8.03998,0zm0,-1.608l-8.03998,0c-0.8844,0 -1.608,0.7236 -1.608,1.608l0,6.43199c0,0.8844 0.7236,1.608 1.608,1.608l8.03998,0c0.8844,0 1.608,-0.7236 1.608,-1.608l0,-6.43199c0,-0.8844 -0.7236,-1.608 -1.608,-1.608zm8.84398,-7.23598l0,4.01999l-8.03998,0l0,-4.01999l8.03998,0zm0,-1.608l-8.03998,0c-0.8844,0 -1.608,0.7236 -1.608,1.608l0,4.01999c0,0.8844 0.7236,1.608 1.608,1.608l8.03998,0c0.8844,0 1.608,-0.7236 1.608,-1.608l0,-4.01999c0,-0.8844 -0.7236,-1.608 -1.608,-1.608zm0,10.45198l0,4.01999l-4.01999,0l0,-4.01999l4.01999,0zm0,-1.608l-4.01999,0c-0.8844,0 -1.608,0.7236 -1.608,1.608l0,4.01999c0,0.8844 0.7236,1.608 1.608,1.608l4.01999,0c0.8844,0 1.608,-0.7236 1.608,-1.608l0,-4.01999c0,-0.8844 -0.7236,-1.608 -1.608,-1.608zm-12.86397,-7.23598l0,4.01999l-4.01999,0l0,-4.01999l4.01999,0zm0,-1.608l-4.01999,0c-0.8844,0 -1.608,0.7236 -1.608,1.608l0,4.01999c0,0.8844 0.7236,1.608 1.608,1.608l4.01999,0c0.8844,0 1.608,-0.7236 1.608,-1.608l0,-4.01999c0,-0.8844 -0.7236,-1.608 -1.608,-1.608z"></path>
+                </svg>
+                Dashboard
+              </h1>
+              Lorem ipsum dolor sit amet.<br><br>
+            </div>
+          </div>
+
+      </div>
+
+      <!-- Center column: divider (hide mobile) -->
+      <div class="col l1 show-desktop">
+          <div class="vl"></div>
+      </div>
+
+      <!-- Right column: outputs -->
+      <div class="col l7 s12">
+
+
+      </div>
+
+  <!-- End main row -->
+  </div>
+
+<!-- End main container -->
+</div>
+
+
+
+
+
+<!-- Loader (external from container) -->
+<div id="quantizing" style="display:none">
+  <center>
+    <div class="bx--loading-overlay">
+    <div data-loading class="bx--loading">
+      <svg class="bx--loading__svg" viewBox="-75 -75 150 150">
+        <title>Loading</title>
+        <circle class="bx--loading__stroke" cx="0" cy="0" r="37.5" />
+      </svg>
+    </div>
+    </div>
+    <!-- <br><br>
+    <div>Quantizing emoticons...</div> -->
+  </center>
+</div>
+
+
+
+
+
+</body>
+
+<script>includeHTML();</script>
+<script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+
+<script>
+refreshPage(); // Refresh page
+goQuantumEmoticon(); // Call python backend
+// includeHTML();
+
+$(document).ready(function(){
+  $("#run").change(function(){
+    console.log("changed!!!!!!!!");
+    if($('#run').is(':checked')) {
+      $("#emo1").val(";)");
+      $("#emo2").val("8)");
+      $("#emo1").prop("disabled", "true");
+      $("#emo2").prop("disabled", "true");
+    } else {
+      $("#emo1").val("");
+      $("#emo2").val("");
+      $("#emo1").removeAttr("disabled");
+      $("#emo2").removeAttr("disabled");
+    }
+  });
+});
+</script>
+
+</html>

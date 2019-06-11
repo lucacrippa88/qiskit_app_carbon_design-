@@ -25,3 +25,10 @@ function includeHTML() {
     }
   }
 };
+
+
+
+function onPage(page_id) {
+  $("#"+page_id).addClass("bx--navigation__category-item--active");
+  return;
+};
