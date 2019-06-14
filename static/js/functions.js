@@ -53,10 +53,18 @@ function goQuantumSpheres(param, base) {
             svg2 = obj.img2;
             op = obj.op;
 
+            var substr1_start = svg.indexOf("<style ");
+            var substr1_end = svg.indexOf("</style>",7);
+            var substr2_start = svg2.indexOf("<style ");
+            var substr2_end = svg2.indexOf("</style>",7);
+            svg = svg.replace(svg.substring(substr1_start,substr1_end),"");
+            svg2 = svg2.replace(svg2.substring(substr2_start,substr2_end),"");
+
             $("#quantized1").empty();
             resizeSvg();
             $("#quantized1").append(svg);
             $("#quantized1").append(svg2);
+
             // $("#quantized-result").css("display", "block");
             resizeSvg();
             $("#operazione").text(op);
