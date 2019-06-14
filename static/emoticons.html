@@ -185,11 +185,10 @@
 <script>
 refreshPage(); // Refresh page
 goQuantumEmoticon(); // Call python backend
-// includeHTML();
+onPage("emoticons-page");
 
 $(document).ready(function(){
   $("#run").change(function(){
-    console.log("changed!!!!!!!!");
     if($('#run').is(':checked')) {
       $("#emo1").val(";)");
       $("#emo2").val("8)");

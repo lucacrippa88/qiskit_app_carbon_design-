@@ -53,10 +53,18 @@ function goQuantumSpheres(param, base) {
             svg2 = obj.img2;
             op = obj.op;
 
+            var substr1_start = svg.indexOf("<style ");
+            var substr1_end = svg.indexOf("</style>",7);
+            var substr2_start = svg2.indexOf("<style ");
+            var substr2_end = svg2.indexOf("</style>",7);
+            svg = svg.replace(svg.substring(substr1_start,substr1_end),"");
+            svg2 = svg2.replace(svg2.substring(substr2_start,substr2_end),"");
+
             $("#quantized1").empty();
             resizeSvg();
             $("#quantized1").append(svg);
             $("#quantized1").append(svg2);
+
             // $("#quantized-result").css("display", "block");
             resizeSvg();
             $("#operazione").text(op);
@@ -146,31 +154,33 @@ $("#go").click(function() {
                     var span = document.createElement('span');
                     if (sim){ // with noise
 
-                      $("#slider").css("display", "block");
+                      // $("#slider").css("display", "block");
 
                       span.innerHTML = obj.value;
                       if(obj.shots < 20) {
                         var opacity = (obj.shots) / shots_total;
+                        // console.log("low  "+opacity);
                         span.classList.add("result");
                         span.setAttribute("id","result"+i);
                         quantized.appendChild(span);
                         $("#result"+i).css("opacity", opacity);
-                        console.log("-- WITH NOISE --");
-                        console.log("shot: "+obj.shots);
-                        console.log("smil: "+obj.value);
-                        console.log("opac: "+opacity);
-                        console.log("---");
+                        // console.log("-- WITH NOISE --");
+                        // console.log("shot: "+obj.shots);
+                        // console.log("smil: "+obj.value);
+                        // console.log("opac: "+opacity);
+                        // console.log("---");
                       } else {
                         var opacity = (obj.shots)*2 / shots_total;
+                        // console.log("high "+opacity);
                         span.classList.add("result");
                         span.setAttribute("id","result"+i);
                         quantized.appendChild(span);
                         $("#result"+i).css("opacity", opacity);
-                        console.log("-- WITH NOISE --");
-                        console.log("shot: "+obj.shots);
-                        console.log("smil: "+obj.value);
-                        console.log("opac: "+opacity);
-                        console.log("---");
+                        // console.log("-- WITH NOISE --");
+                        // console.log("shot: "+obj.shots);
+                        // console.log("smil: "+obj.value);
+                        // console.log("opac: "+opacity);
+                        // console.log("---");
                       }
                     } else { // no noise
                       span.innerHTML = binToAscii(obj.value);
@@ -179,11 +189,11 @@ $("#go").click(function() {
                       span.setAttribute("id","result"+i);
                       quantized.appendChild(span);
                       $("#result"+i).css("opacity", opacity);
-                      console.log("-- NO NOISE --");
-                      console.log("shot: "+obj.shots);
-                      console.log("smil: "+obj.value);
-                      console.log("opac: "+opacity);
-                      console.log("---");
+                      // console.log("-- NO NOISE --");
+                      // console.log("shot: "+obj.shots);
+                      // console.log("smil: "+obj.value);
+                      // console.log("opac: "+opacity);
+                      // console.log("---");
                     }
 
 
