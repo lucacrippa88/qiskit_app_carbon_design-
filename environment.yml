@@ -12,7 +12,7 @@ dependencies:
   - cython
   - IPython
   - pip:
-    - matplotlib
+    - matplotlib==3.0.0
     - flask_login
     - qutip
     - ibmquantumexperience==2.0.4
